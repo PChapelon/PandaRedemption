@@ -1,0 +1,346 @@
+﻿unit derriereMaison;
+
+interface
+
+uses 
+	GestionEcran, gestionnaire;
+
+procedure jardin(var personnage : heros);
+procedure potager(var personnage : heros);
+procedure etang(var personnage : heros);
+procedure ponton(var personnage : heros);
+procedure recolter(var personnage : heros);
+procedure construirePotager (var personnage : heros);
+procedure planter(var personnage : heros);
+function recoltPoisson(): Integer;
+
+
+implementation
+
+procedure jardin(var personnage : heros);
+
+var
+	choix : Integer;
+	quitter : Boolean;
+
+begin
+
+	quitter := true;
+	while quitter do
+	begin
+          effacerEcran;
+		writeln('Vous voila dans votre jardin. Que voulez-vous faire?');
+    if personnage.event.potager then
+    writeln('1 - Voir le potager')
+    else
+    writeln('1 - Construire un potager');
+		writeln('2 - Se rendre a l''etang');
+		writeln('3 - Retourner a la maison');
+		readln(choix);
+		case choix of
+			1: if personnage.event.potager then
+         potager(personnage)
+         else
+         construirePotager(personnage);
+			2: etang(personnage);
+			3: quitter := false;
+		end;
+	end;
+end;
+
+
+procedure potager(var personnage : heros);
+
+var
+	choix: Integer;
+  quitter : boolean;
+
+
+begin
+
+  quitter := true;
+  while quitter do
+  begin
+    effacerEcran;
+  writeln('Que voulez-vous faire?');
+   writeln('1 - Planter des graines');
+   writeln('2 - Recolter les plantations');
+   writeln('3 - Retourner dans le jardin');
+   readln(choix);
+   case choix of
+    1 : planter (personnage);
+    2 : recolter (personnage);
+    3 : quitter := false;
+   end;
+  end;
+end;
+
+//******************************************************************************
+
+procedure planter(var personnage : heros);
+
+var
+  choix : integer;
+  quitter : boolean;
+
+begin
+  quitter := true;
+  while quitter do
+    begin
+    effacerEcran;
+    writeln('Que voulez-vous planter?');
+    writeln('1 - Des carottes');
+    writeln('2 - Des aubergines');
+    writeln('3 - Des woompas');
+    writeln('4 - Rien');
+    readln(choix);
+    case choix of
+     1 :
+     begin
+        if personnage.event.plantation then
+            if personnage.graine.carottes >0 then
+            begin
+              personnage.plantation.temps := 1;
+              personnage.graine.carottes := personnage.graine.carottes - 1;
+              personnage.plantation.carottes := true;
+              writeln('Vous plantez des carottes');
+              personnage.event.plantation := true;
+            end
+            else
+              writeln('Vous n''avez plus de graines')
+        else
+          writeln('Vous avez deja plante quelque chose.');
+      end;
+
+      2:
+      begin
+        if personnage.event.plantation then
+            if personnage.graine.aubergines >0 then
+            begin
+              personnage.plantation.temps := 1;
+              personnage.plantation.aubergines := true;
+              personnage.graine.aubergines := personnage.graine.aubergines - 1;
+              writeln('Vous plantez des aubergines');
+              personnage.event.plantation := true;
+            end
+            else
+              writeln('Vous n''avez plus de graines')
+        else
+          writeln('Vous avez deja plante quelque chose.');
+      end;
+
+      3:
+      begin
+        if personnage.event.plantation then
+            if personnage.graine.woompas >0 then
+            begin
+              personnage.plantation.temps := 1;
+              personnage.graine.woompas := personnage.graine.woompas - 1;
+              personnage.plantation.woompas := true;
+              writeln('Vous plantez des woompas');
+              personnage.event.plantation := true;
+            end
+            else
+              writeln('Vous n''avez plus de graines')
+        else
+          writeln('Vous avez deja plante quelque chose.');
+      end;
+      4 : quitter := false;
+     end;
+     readln;
+  end;
+end;
+
+
+//******************************************************************************
+
+procedure recolter(var personnage : heros);
+
+
+begin
+  if personnage.plantation.temps > 50 then
+    begin
+    writeln('Vos plantations empestent la pourriture, vous choisissez de les enlever');
+    personnage.plantation.temps := 0;
+    personnage.plantation.carottes := false;
+    personnage.plantation.aubergines := false;
+    personnage.plantation.woompas := false;
+    personnage.event.plantation := false;
+    end
+    else
+    begin
+    if personnage.plantation.temps > 10 then
+    begin
+      if personnage.plantation.carottes then
+      begin
+      personnage.plantation.carottes := false;
+      personnage.plantation.temps := 0;
+      personnage.legumes.carottes := personnage.legumes.carottes + 1;
+      writeln('Vous recoltez des carottes');
+      personnage.event.plantation := false;
+      end
+      else
+      begin
+        if personnage.plantation.aubergines then
+        begin
+        personnage.plantation.aubergines := false;
+        personnage.plantation.temps := 0;
+        personnage.legumes.aubergines := personnage.legumes.aubergines + 1;
+        writeln('Vous recoltez des aubergines');
+        personnage.event.plantation := false;
+        end
+        else
+          if personnage.plantation.woompas then
+          begin
+          personnage.plantation.woompas := false;
+          personnage.plantation.temps := 0;
+          personnage.legumes.woompas := personnage.legumes.woompas + 1;
+          writeln('Vous recoltez des woompas');
+          personnage.event.plantation := false;
+          end;
+      end;
+    end
+    else
+    begin
+      if personnage.plantation.temps > 0 then
+      begin
+      writeln('Vos plantations ne sont pas encore mures');
+      end
+      else
+      begin
+        writeln('Vous n''avez pas de plantations');
+      end;
+    end;
+    end;
+end;
+
+
+
+
+procedure construirePotager (var personnage : heros);
+
+begin
+  if ((personnage.bamboo < 100) or (personnage.pierre < 50))   then
+  begin
+       writeln('Vous n''avez pas assez de materiaux, il vous faut 100 unites de bamboo et 50 unites de pierre');
+       readln;
+  end
+  else
+  begin
+    personnage.event.potager := true;
+    personnage.bamboo := personnage.bamboo - 100;
+    personnage.pierre := personnage.pierre - 50;
+  end;
+end;
+
+
+
+
+
+
+
+
+
+//******************************************************************************
+procedure etang(var personnage : heros);
+
+var
+  choix : integer;
+  quitter : boolean;
+
+begin
+  quitter := true;
+  while quitter do
+  begin
+    effacerEcran;
+    writeln('Devant vous se trouve un petit etang, sur lequel un ponton se voit prolonge. Que voulez-vous faire?');
+    writeln('1 - Monter sur le ponton ');
+    writeln('2 - Pecher');
+    writeln('3 - Retourner au jardin');
+    readln(choix);
+    case choix of
+      1: ponton(personnage);
+      2: if personnage.canAPech then
+          personnage.poisson := personnage.poisson + recoltPoisson
+         else
+         begin
+         writeln('Vous n''avez pas de canne a peche');
+         readln;
+         end;
+
+      3: quitter := false;
+    end;
+  end;
+
+end;
+
+
+function recoltPoisson(): Integer;
+
+var
+  poisson: Integer;
+  prob : integer;
+  choix : integer;
+
+begin
+  randomize;
+  prob := random(100);
+  if prob < 35 then
+  begin
+    writeln('Un poisson mord a votre ligne. Voulez vous le laisser filer?');
+    writeln('1 - Oui');
+    writeln('2 - Non');
+    readln(choix);
+    case choix of
+      1: poisson := 0;
+      2: poisson := 1;
+    end;
+  end
+  else 
+  begin
+    writeln('Cela fait un moment que vous attendez et rien ne se passe.');
+    poisson := 0;
+  end; 
+  recoltPoisson := poisson;
+  readln;
+end;
+
+
+procedure ponton(var personnage : heros);
+
+var
+  prob: Integer;
+  lutin : integer;
+
+
+begin
+  effacerEcran;
+  if personnage.event.lutin then
+  begin
+    randomize;
+    prob := random(100);
+    if prob<33 then
+    begin
+      writeln('Avancant sur le ponton, vous entendez un craquement de bois, celui-ci semble    tres fragile. Soudain un petit lutin rouge apparait tel un NINJA devant vous.');
+      writeln('Vous tentez de l''attrapper avant qu''il ne file mais celui-ci, trop rapide pour  vous, reussi a vous prendre sans mal la bourse accrocher a votre taille.');
+      writeln('Malheureusement vous voila depouillez de tout votre argent.');
+      personnage.argent := 0;
+      personnage.event.lutin := false;
+    end
+    else 
+    begin
+      writeln('Avançant sur le ponton, vous entendez un craquement de bois, celui-ci semble  tres fragile. Soudain un petit lutin apparait tel un NINJA devant vous.');
+      writeln('Habille de dore, il vous tend une bourse remplie d''argent.');
+      randomize;
+      lutin := random(900) + 100;
+      writeln('Vous avez gagnez ',lutin,' piece d''or');
+      personnage.argent := personnage.argent + lutin;
+    end;
+    
+  end
+  else 
+    writeln('Le petit lutin de la derniere fois ne semble pas present.');
+    readln;
+end;
+
+end.

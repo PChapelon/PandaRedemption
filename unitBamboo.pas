@@ -1,0 +1,59 @@
+﻿unit unitBamboo;
+
+interface
+
+uses gestionnaire,gestionEcran,unitPanda;
+
+procedure foretBamboo (var personnage:heros);
+function recoltBamboo(personnage : heros): Integer;
+
+implementation
+
+procedure foretBamboo (var personnage:heros);//procédure donnant plusieurs choix à l'utilisateur dans la forêt de bamboo
+
+var
+  choix:integer; //Valeur que prend les réponses du joueur.
+  quitter: boolean; //Variable qui permet de quitter la boucle
+
+begin
+	quitter:= true;
+  effacerEcran;
+	writeln('Apres plusieurs heures de marche vous vous trouvez dans une epaisse foret de bamboo.');
+	readln;
+
+	while quitter do
+	begin
+    effacerEcran;
+    writeln('Stock de morceaux de bamboos : ', personnage.bamboo);
+    writeln('');
+    writeln('Que voulez-vous faire?');
+		writeln('1 - Vous faites demi-tour');//Choix 1
+		writeln('2 - Vous voulez recolter du bamboo'); //Choix 2
+    writeln('3 - Vous vous enfoncez dans la foret de bamboo'); //Choix 4
+		readln(choix);
+		case choix of
+			1 : quitter:= false; //Choix qui permet de quitter
+			2 : personnage.bamboo := personnage.bamboo + recoltbamboo(personnage);//Option qui permet de récolter du bamboo
+      3 : pnjPanda(personnage);//Fait appelle à la procédure du PNJ Panda
+		end;
+	end;
+end;
+
+//*****************************************Début Couper Bamboo***************************
+function recoltBamboo(personnage : heros): Integer; //fonction pour la récolte du bois
+
+begin
+  if personnage.hache then
+  begin
+    randomize;
+    recoltBamboo := (random(2)+5);
+  end
+  else
+  begin
+    randomize; //appel de randomize
+    recoltBamboo := (random(2)+1); //renvoie 1 ou 2
+  end;
+end;
+
+
+end.

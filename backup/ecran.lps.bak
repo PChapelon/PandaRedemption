@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="21">
+      <Unit0>
+        <Filename Value="ecran.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ecran"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="13"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="gestionnaire.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="gestionnaire"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="50"/>
+        <CursorPos X="33" Y="69"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="debuterjeu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="debuterJeu"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="66"/>
+        <CursorPos X="90" Y="100"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="unitemine.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uniteMine"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="11" Y="91"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="unitforet.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unitforet"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="64"/>
+        <CursorPos X="39" Y="79"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="unitmarchand.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="unitMarchand"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="357"/>
+        <CursorPos X="31" Y="37"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="croisementlieu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="croisementLieu"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="17"/>
+        <CursorPos X="90" Y="6"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="gestionecran.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GestionEcran"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="202"/>
+        <CursorPos X="61" Y="208"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="house.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="house"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="51"/>
+        <CursorPos X="11" Y="53"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="unitcoffre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="unitCoffre"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="94"/>
+        <CursorPos X="5" Y="114"/>
+        <UsageCount Value="35"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="debutfin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="debutFin"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="541"/>
+        <CursorPos X="45" Y="549"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="derriereMaisonmodif.pas"/>
+        <UnitName Value="derriereMaison"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="derriereMaison.pas"/>
+        <UnitName Value="derriereMaison"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="27"/>
+        <CursorPos X="27" Y="148"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="tableCraft.pas"/>
+        <UnitName Value="tableCraft"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="152"/>
+        <CursorPos X="127" Y="146"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\adrien\unitBamboo.pas"/>
+        <UnitName Value="unitBamboo"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="23"/>
+        <CursorPos X="31" Y="29"/>
+        <UsageCount Value="10"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\adrien\unitPanda.pas"/>
+        <UnitName Value="unitPanda"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="45"/>
+        <CursorPos X="19" Y="4"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="unitPanda.pas"/>
+        <UnitName Value="unitPanda"/>
+        <EditorIndex Value="13"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="11"/>
+        <CursorPos X="31" Y="38"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="unitBamboo.pas"/>
+        <UnitName Value="unitBamboo"/>
+        <EditorIndex Value="12"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="17"/>
+        <CursorPos X="93" Y="38"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="unitVillage.pas"/>
+        <UnitName Value="unitVillage"/>
+        <EditorIndex Value="15"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="35"/>
+        <CursorPos X="33" Y="38"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="uniteAraign.pas"/>
+        <UnitName Value="uniteAraign"/>
+        <EditorIndex Value="14"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="343"/>
+        <CursorPos X="33" Y="353"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="ecranTitre.pas"/>
+        <UnitName Value="test"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="28" HistoryIndex="27">
+      <Position1>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="382" Column="9" TopLine="370"/>
+      </Position1>
+      <Position2>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="156" Column="29" TopLine="144"/>
+      </Position2>
+      <Position3>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="384" Column="28" TopLine="370"/>
+      </Position3>
+      <Position4>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="417" Column="1" TopLine="396"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="49" Column="82" TopLine="41"/>
+      </Position5>
+      <Position6>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="54" Column="28" TopLine="39"/>
+      </Position6>
+      <Position7>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="8" Column="67" TopLine="1"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unitVillage.pas"/>
+        <Caret Line="6" Column="39" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unitVillage.pas"/>
+        <Caret Line="43" Column="5" TopLine="31"/>
+      </Position9>
+      <Position10>
+        <Filename Value="unitVillage.pas"/>
+        <Caret Line="44" Column="5" TopLine="33"/>
+      </Position10>
+      <Position11>
+        <Filename Value="unitVillage.pas"/>
+        <Caret Line="57" Column="8" TopLine="38"/>
+      </Position11>
+      <Position12>
+        <Filename Value="unitVillage.pas"/>
+        <Caret Line="42" Column="42" TopLine="31"/>
+      </Position12>
+      <Position13>
+        <Filename Value="unitVillage.pas"/>
+        <Caret Line="48" Column="18" TopLine="34"/>
+      </Position13>
+      <Position14>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="122" Column="66" TopLine="111"/>
+      </Position14>
+      <Position15>
+        <Filename Value="unitVillage.pas"/>
+        <Caret Line="61" Column="5" TopLine="29"/>
+      </Position15>
+      <Position16>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="44" Column="14" TopLine="7"/>
+      </Position16>
+      <Position17>
+        <Filename Value="uniteAraign.pas"/>
+        <Caret Line="314" Column="1" TopLine="302"/>
+      </Position17>
+      <Position18>
+        <Filename Value="unitPanda.pas"/>
+        <Caret Line="75" Column="57" TopLine="64"/>
+      </Position18>
+      <Position19>
+        <Filename Value="unitPanda.pas"/>
+        <Caret Line="82" Column="3" TopLine="68"/>
+      </Position19>
+      <Position20>
+        <Filename Value="croisementlieu.pas"/>
+        <Caret Line="30" Column="20" TopLine="19"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ecran.lpr"/>
+        <Caret Line="11" Column="22" TopLine="1"/>
+      </Position21>
+      <Position22>
+        <Filename Value="debuterjeu.pas"/>
+        <Caret Line="26" Column="12" TopLine="18"/>
+      </Position22>
+      <Position23>
+        <Filename Value="debutfin.pas"/>
+        <Caret Line="22" Column="17" TopLine="11"/>
+      </Position23>
+      <Position24>
+        <Filename Value="debutfin.pas"/>
+        <Caret Line="42" Column="14" TopLine="14"/>
+      </Position24>
+      <Position25>
+        <Filename Value="unitemine.pas"/>
+        <Caret Line="77" Column="9" TopLine="63"/>
+      </Position25>
+      <Position26>
+        <Filename Value="unitemine.pas"/>
+        <Caret Line="52" Column="64" TopLine="41"/>
+      </Position26>
+      <Position27>
+        <Filename Value="unitBamboo.pas"/>
+        <Caret Line="43" Column="1" TopLine="21"/>
+      </Position27>
+      <Position28>
+        <Filename Value="tableCraft.pas"/>
+        <Caret Line="175" Column="32" TopLine="1"/>
+      </Position28>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>

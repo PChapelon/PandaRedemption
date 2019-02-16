@@ -1,0 +1,27 @@
+program PandaRedempteur;
+
+
+
+uses
+  Classes,
+  debuterJeu,
+  gestionnaire,
+  uniteMine,
+  Unitforet,
+  tableCraft,
+  unitMarchand,
+  croisementLieu,
+  GestionEcran,
+  house,
+  derriereMaison,
+  unitBamboo,
+  unitPanda,
+  debutFin;
+
+begin
+  ecranTitre;
+  debutJeu;
+end.
+
+
+end.

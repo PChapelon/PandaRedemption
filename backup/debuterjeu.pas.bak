@@ -1,0 +1,108 @@
+unit debuterJeu;
+
+interface
+
+uses
+  GestionEcran,gestionnaire,croisementLieu,house;
+
+
+procedure commencement(var personnage : heros; var coffre : stock);
+procedure debutJeu();
+
+implementation
+
+procedure debutJeu();
+
+var
+  quitter : boolean; //permet de  sortir de la boucle
+  choix : integer; //correspond à ce que choisit le joueur
+
+
+begin
+  quitter := true;
+  while quitter do
+  begin
+    effacerEcran;
+    writeln(' ______                 _          ');
+    writeln('(_____ \               | |       ');
+    writeln(' _____) )____ ____   __| |_____     ');
+    writeln('|  ____(____ |  _ \ / _  (____ |  ');
+    writeln('| |    / ___ | | | ( (_| / ___ |  ');
+    writeln('|_|    \_____|_| |_|\____\_____|  ');
+    writeln('');
+    writeln(' ______            _                        _             ');
+    writeln('(_____ \          | |                   _  (_)            ');
+    writeln(' _____) )_____  __| |_____ ____  ____ _| |_ _  ___  ____  ');
+    writeln('|  __  /| ___ |/ _  | ___ |    \|  _ (_   _) |/ _ \|  _ \ ');
+    writeln('| |  \ \| ____( (_| | ____| | | | |_| || |_| | |_| | | | |');
+    writeln('|_|   |_|_____)\____|_____)_|_|_|  __/  \__)_|\___/|_| |_|');
+    writeln('                                |_|                       ');
+    writeln('');
+    writeln('1 - Commencer une partie');
+    writeln('2 - Quitter');
+    writeln('');
+    readln(choix);
+    case choix of
+        1 : commencement(personnage,coffre); //on lance le jeu
+        2 : quitter := false; //le joueur quitte le jeu
+    end;
+  end;
+
+
+end;
+
+
+
+
+procedure commencement(var personnage : heros; var coffre : stock);
+
+begin
+     effacerEcran;
+     writeln('Quel est votre nom aventurier?');
+     readln(personnage.nom);   //enregistre le nom choisi par l'utilisateur
+     Upmarchand.argent := 0;
+     personnage.poisson := 0;
+     personnage.canAPech := false;
+     personnage.potion := 0;
+     personnage.bamboo := 0;
+     personnage.legumes.woompas := 0;
+     personnage.legumes.carottes := 0;
+     personnage.legumes.aubergines := 0;
+     personnage.plantation.aubergines := false;
+     personnage.plantation.carottes:= false;
+     personnage.plantation.woompas := false;
+     personnage.plantation.temps := 0;
+     personnage.graine.woompas := 0;
+     personnage.graine.aubergines := 0;
+     personnage.graine.carottes := 0;
+     personnage.event.potager := false;
+     personnage.event.plantation := false;
+     personnage.event.lutin := true;
+     personnage.event.boss := false;
+     personnage.event.panda := true;
+     personnage.event.fin := false;
+     personnage.mort := false; //initialisation des variables concernant le personnages
+     personnage.pioche:= false;
+     personnage.hache := false;
+     personnage.soupe := false;
+     personnage.vie := 100;    //initialisation de vie du personnage
+     personnage.pierre := 0;   //initialisation du stock de pierre du personnage
+     personnage.fer := 0;      //initialisation du stock de fer du personnage
+     personnage.bois := 0;     //initialisation du stock de bois du personnage
+     personnage.argent := 0;   //initialisation de l'argent du personnage
+     personnage.arme := 0;     //initialisation a 0 de l'arme du personnage(il n'en a pas)
+     personnage.armure := 0;   //initialisation a 0 de l'armure du personnage(il n'en a pas)
+     coffre.pierre := 0;       //initialisation du stock de pierre du coffre
+     coffre.fer := 0;          //initialisation du stock de fer du coffre
+     coffre.bois := 0;         //initialisation du stock de bois du coffre
+     maison(personnage,coffre);//fait appel a l'unité maison
+     effacerEcran;             //efface l'écran pour afficher le prochain
+     writeln('Un goblin surgit devant vous en brandissant un epee en l''air tout en se         dirigeant vers la mine et criant : "JE SUIS UN BASILIC!!!!!!"');
+     readln;
+     croisement(personnage );  //fait appel a l'unité croisement
+     readln;
+end;
+
+
+end.
+
